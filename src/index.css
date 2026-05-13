@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@1,600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-serif: "Playfair Display", serif;
+
+  --color-brand-primary: #ffffff;
+  --color-brand-secondary: rgba(255, 255, 255, 0.5);
+  --color-brand-accent: #007AFF; 
+  --color-brand-bg: #050505;
+  --color-brand-card: rgba(255, 255, 255, 0.03);
+
+  --radius-xl: 20px;
+  --radius-2xl: 32px;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-primary font-sans antialiased overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/[0.03] backdrop-blur-[24px] border border-white/[0.08];
+  }
+
+  .mesh-bg {
+    @apply absolute inset-0 -z-10 bg-fixed;
+    background: radial-gradient(circle at 80% 20%, #1a1a3a 0%, transparent 40%), 
+                radial-gradient(circle at 20% 80%, #0a2a1a 0%, transparent 40%);
+  }
+
+  .nav-pill {
+    @apply px-4 py-2 rounded-full transition-all duration-300 font-medium text-[13px] hover:bg-white/10;
+  }
+
+  .indicator {
+    @apply w-2 h-2 rounded-full bg-[#00FF94] shadow-[0_0_10px_#00FF94];
+  }
+
+  .hero-text {
+    @apply text-[64px] md:text-[82px] leading-[0.95] tracking-[-3px] font-bold;
+  }
+
+  .stat-label {
+    @apply text-[10px] uppercase tracking-[2px] text-white/40;
+  }
+}

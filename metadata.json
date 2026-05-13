@@ -1,0 +1,6 @@
+{
+  "name": "Nexus AI - Precision Automation Agency",
+  "description": "Ultra-premium AI automation agency with 3D visuals, real-time analytics, and intelligent automation solutions for industry leaders.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": []
+}
